@@ -29,8 +29,11 @@ jobs:
           ruby-version: .ruby-version
           bundler-cache: true # Runs 'bundle install' and caches gems automatically
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
+      - name: Install dependencies
+        run: |
+          bundle config set --local frozen false
+          bundle lock --add-platform x86_64-linux
+          bundle install
 
       - name: Build site
         # Replace 'jekyll build' with your specific build command if using Middleman/etc.

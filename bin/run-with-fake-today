@@ -1,0 +1,22 @@
+#!/bin/sh
+
+if [ -z "$1" ]
+then
+    (
+        echo "Runs a dev server with the site rendered as it wouild appear on an"
+        echo "arbitrary date. Usage:"
+        echo
+        echo "  $0 <fake_today> [superfluous args]"
+        echo
+        echo "...where fake_today can be:"
+        echo
+        echo "  1969-09-26  specific date"
+        echo "  +3          number of days relative to today"
+        echo
+    ) >&2
+    exit 1
+fi
+
+export fake_today="$1"; shift
+
+"$(dirname "$0")/run-dev" "$@"

@@ -1,0 +1,12 @@
+{
+    "name": "Dev Garden",
+    "gcal_id": "macalester.edu_foee38ec77nqatr9hor7id17bk@group.calendar.google.com",
+    "default_event_url": "https://devgarden.macalester.edu/events/1",
+    "default_category": "dept_events",
+    "categories": [
+        {
+            "match_desc": "open consulting hours",
+            "category": "help"
+        }
+    ]
+}

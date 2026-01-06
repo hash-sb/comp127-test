@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# cd to project dir, which may be necessary
+# to trigger rvm/rbenv ruby version switch
+cd "$(dirname "$0")/.."
+
+bundle && show_errors=1 bundle exec superfluous . --live "$@"

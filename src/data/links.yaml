@@ -1,0 +1,80 @@
+- name: "Home"
+  url: "/"
+  special_children: next_class_day
+
+- name: "Course info"
+  children:
+    - name: "Syllabus (Dan)"
+      url: "https://dandrake.github.io/2025-fall-127/syllabus.html"
+    - name: "Syllabus (Paul)"
+      url: "/resources/comp127-syllabus-cantrell.pdf"
+      screen_reader_text: "(PDF)"
+    - name: "Learning Goals"
+      url: "/resources/learning-goals"
+      screen_reader_text: "for course"  # to distinguish from “Leaning goals” links in activity TOCs
+    - name: "Schedule"
+      url: "/schedule"
+
+- name: "Conceptual Mastery Puzzles"
+  children:
+    - name: "Instructions / practice"
+      url: "/tasks/conceptual_puzzles"
+    - name: "Official attempts site"
+      url: "https://puzzles.comp127.innig.net"
+
+# - name: "Assignments"
+#   special_children: assignments
+
+- name: "COMP 127 Help"
+  children:
+    - name: "Slack channel"
+      url: "https://macdevgarden.slack.com/archives/C09D4KYT02V"
+    - name: "Preceptor office hours"
+      url: "https://calendar.google.com/calendar/embed?src=c_5fpr86knrqo7t5167cro67m6mk%40group.calendar.google.com&ctz=America%2FChicago"
+    - name: "Preceptors bios"
+      url: "https://docs.google.com/presentation/d/17VzouPr5CTcZriYjcwJRHSLnUarW7TiszndkGQVvNUo/edit"
+    - name: "Office hours (Dan)"
+      url: "https://calendar.google.com/calendar/appointments/schedules/AcZssZ0XTF4wnW26huqX9xR3rlgSylk_ZwiTxAa2_5tnKBPRbbnwgQLnw9r0FhcmsfZNaKnmirQLx8BR?gv=true"
+    - name: "Office hours (Paul)"
+      url: "https://calendly.com/macalester-pcantrell"
+
+- name: "How to…"
+  children:
+    - name: "…install course tools"
+      url: "https://dandrake.github.io/workflow-wizard-walkthrough/"
+    - name: "…do a reading assignment"
+      url: "/resources/reading-procedure"
+    - name: "…do an in-class activity"
+      url: "/resources/activity-procedure"
+    - name: "…do a homework / take-home exercise"
+      url: "/resources/take-home-procedure"
+    - name: "…do conceptual puzzles"
+      url: "/tasks/conceptual_puzzles"
+    - name: "…file a Kilt Graphics issue"
+      url: "/resources/filing-issues"
+    - name: "…clean VS Code Java"
+      url: "/resources/vscode-clean-java"
+
+- name: "Reference"
+  children:
+    - name: "Glossary"
+      url: "/glossary"
+    - name: "Style Guide"
+      url: "/resources/style-guide"
+    - name: "Kilt Graphics API docs"
+      url: "https://mac-comp127.github.io/kilt-graphics/"
+    - name: "Java Language API docs"
+      url: https://docs.oracle.com/en/java/javase/21/docs/api/index.html
+    - name: "MSCS Community Guidelines"
+      url: "https://docs.google.com/document/d/e/2PACX-1vSlLLWmyOf8WKGDKJ_qypgA_kQI1dNFGEKH0mtFoqfAUARZN7ypVCgivnmPjccks9jJzW1rgEzt7QMI/pub"
+
+- name: "Student Well-Being"
+  children:
+    - name: "Mental and Physical Health"
+      url: "https://www.macalester.edu/health-and-wellness/"
+    - name: "Academic Success"
+      url: "https://www.macalester.edu/academic-success/"
+    - name: "Immediate Help 24/7"
+      url: "https://www.macalester.edu/dean-of-students/find-help-quickly-24-7-365/"
+
+# - name: "Personal Repository"

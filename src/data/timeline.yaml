@@ -1,0 +1,376 @@
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+- topic: "Fundamentals"
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+- day:
+    topic: "Course overview, abstraction"
+    in_class:
+      - activity: abstraction
+    assigned:
+      - reading: syllabus
+      # We want these to appear in this specific order: Slack first so they can get help, then
+      # installfest, then survey after they have a GitHub username, then the reading after install
+      # so they can run the code.
+      - task: join_slack
+      - task: installfest
+        note:
+          - "Please try to do this before next class, but…"
+          - "If it doesn’t work or you get stuck, do not struggle for too long on your own! Reach out for help."
+      - task: student_survey
+      - reading: java_basics  # Make sure to list this after installfest
+      - hw: hw0
+
+- day:
+    topic: "Syntax, ASTs, static types, operator precedence"
+    due:
+      - task: join_slack
+      - task: installfest
+      - task: student_survey
+      - reading: java_basics
+    in_class:
+      - activity: expressions_asts_types
+    assigned:
+      - exercise: game_of_life
+
+- day:
+    topic: "Exploring and using abstractions, calling methods"
+    due:
+      - hw: hw0
+        note:
+          - "All homeworks are due at 6:00pm on the due date."
+          - "(This first homework is just a practice run, to make sure all the software and the homework submission process is working for everyone.)"
+      - reading: syllabus
+      - reading: kinds_of_types
+    in_class:
+      - activity: string_methods
+    assigned:
+      - hw: units_and_coins
+      - task: mscs_events
+
+- day:
+    topic: "Unit tests"
+    due:
+      - reading: list_basics
+      - reading:
+          name: MSCS Community Guidelines
+          url: "https://docs.google.com/document/d/e/2PACX-1vSlLLWmyOf8WKGDKJ_qypgA_kQI1dNFGEKH0mtFoqfAUARZN7ypVCgivnmPjccks9jJzW1rgEzt7QMI/pub"
+      - reading:
+          name: Course Learning Goals
+          url: "/resources/learning-goals"
+    in_class:
+      - activity: unit_testing
+
+- day:
+    topic: "Refactoring"
+    due:
+      - reading: loop_basics
+      - exercise: game_of_life
+        note: "(please review above to find additional materials on reflection submission boxes and self-check rubric)"
+    in_class:
+      - activity: refactoring_using_tests
+
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+- topic: "The Heart of OOP"
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+- day:
+    topic: "Object modeling"
+    due:
+      - reading: classes_objects_state_behavior
+    in_class:
+      - activity: toaster
+        note: "(in-class discussion)"
+
+- day:
+    topic: "Classes and objects from the outside"
+    due:
+      - hw: units_and_coins
+        note: "(at 6pm)"
+      - reading: misc1
+      - activity: emoji_drawing
+        note_before: "Read the first two sections in preparation for class:"
+    in_class:
+      - activity: emoji_drawing
+    assigned:
+      - exercise: emoji_vacation
+
+- day:
+    topic: "Classes and objects from the inside, abstraction and encapsulation"
+    in_class:
+      - activity: bicycle
+
+- day:
+    due:
+      - reading: class_anatomy
+    in_class:
+      - activity: bicycle
+      - task: conceptual_puzzles
+        note:
+          - "Get started on these using any extra time after the activity."
+          - "Continue outside of class throughout the semester."
+    assigned:
+      - hw: bubble_blitz
+      - task: conceptual_puzzles
+
+- day:
+    topic: "State and instance variables, objects as models of processes"
+    due:
+      - exercise: emoji_vacation
+      - reading: class_members
+    in_class:
+      - activity: inkblot
+    assigned:
+      - exercise: cell_absorption
+
+- day:
+    topic: "Object relationships, the stack and the heap"
+    announcement: "Class is in the Idea Lab!<br>Library 2nd floor! 😎"
+    due:
+    in_class:
+      - activity: idea_lab
+
+
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+- topic: "Subtypes and Polymorphism"
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+- day:
+    topic: "Polymorphism, abstract types"
+    due:
+      - reading: interfaces
+      - hw: bubble_blitz
+    in_class:
+      - activity: library_media
+    assigned:
+      - hw: painter
+
+- day:
+    due:
+      - reading: inheritance
+        # TODO: should this one move to same day as train_car, then move encapsulated_behaviors later?
+    in_class:
+      - activity: library_media
+        note: "(continued)"
+
+- day:
+    topic: "Object modeling revisited"
+    due:
+      - reading: mastermind
+      - exercise: cell_absorption
+    in_class:
+      - activity:
+          name: Mastermind
+          note: "(class discussion)"
+    assigned:
+      - exercise: rpg_battle
+
+- day:
+    topic: "Customization via subclassing"
+    due:
+      - reading: encapsulated_behaviors
+        # TODO: Move this to employee_database day, which applies the technique it describes?
+        #       Or is this more helpful as a warmup for inheritance_problems reading?
+    in_class:
+      - activity: train_car
+        # TODO: This activity could use a revamp for focus, flow, testability earlier in the process
+
+- day:
+    due:
+      - reading: inheritance_problems
+    in_class:
+      - activity:
+          name: "Open Q&A on the reading, inheritance, interfaces, OOP, etc."
+          unlisted: true
+
+- day:
+    due:
+      - exercise: rpg_battle
+    topic: "Replacing inheritance with composition"
+    in_class:
+      - activity: employee_database
+
+- day:
+    due:
+      - hw: painter
+    in_class:
+      - note_before: "(Optional) Finish"
+        activity: employee_database
+      - activity:
+          name: "Work on conceptual puzzles"
+          unlisted: true
+
+- day:
+    topic: "Play!"
+    in_class:
+      - activity: critters
+    assigned:
+      - exercise: weather_display
+
+
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+- topic: "Closures"
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+- day:
+    topic: "Closures (a.k.a. lambdas), variable capture"
+    due:
+      - reading: java_closures
+    in_class:
+      - activity: graphing_calculator_1
+
+- day:
+    topic: "Event handling, closures for deferred execution"
+    due:
+      - reading: kilt_graphics_events
+    in_class:
+      - activity: graphing_calculator_2
+
+- day:
+    topic: "Steams, map and filter operations"
+    due:
+      - reading: java_streams
+    in_class:
+      - activity: stream_visualizer
+    assigned:
+      - hw: breakout
+
+- day:
+    topic: "Translating between loops and streams"
+    due:
+      - reading: stream-terminal-operations
+      - exercise: weather_display
+    in_class:
+      - activity: loops_streams
+
+- day:
+    topic: "Parallelism, concurrency, shared mutable state"
+    in_class:
+      - activity: concurrency_1
+      - activity: concurrency_2
+
+- day:
+    due:
+      - hw: breakout_checkpoint_1
+    in_class:
+      - note_before: "Work on"
+        hw: breakout
+
+
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+- topic: "More Basic Data Structures"
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+- day:
+    due:
+      - reading: arrays
+    in_class:
+      - activity: pixel_arrays
+
+- day:
+    due:
+      - reading: maps
+    in_class:
+      - activity: maps_intro
+
+
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+- topic: "Abstraction and APIs"
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+- day:
+    topic: "APIs, contracts, decoupling, separation of concerns"
+    due:
+      - reading: apis
+      - hw: breakout_checkpoint_2
+    in_class:
+      - activity: opening_the_door
+
+- day:
+    topic: "Preconditions, postconditions, invariants, immutable data"
+    due:
+      - reading: contracts
+    in_class:
+      - activity: registrar_1
+    assigned:
+      - reading: defensive_copying
+
+- day:
+    topic: "Defensive programming"
+    due:
+      - reading: defensive_copying
+    in_class:
+      - note_before: "Finish"
+        activity: registrar_1
+      - note_before: "Get started on"
+        exercise: registrar_2
+    assigned:
+      - exercise: registrar_2
+
+- day:
+    due:
+      - hw: breakout
+    in_class:
+      - activity: play
+    assigned:
+      - task: project_team_survey
+
+
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+- topic: "Projects"
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+- day:
+    due:
+      - task: project_team_survey
+      - exercise: registrar_2
+    in_class:
+      - task: project
+        note_before: "Get started on the"
+    assigned:
+      - task: project
+      - hw: audio_synth
+
+- day:
+    in_class:
+      - task: project
+    assigned:
+      - reading: debugging_strategies
+
+- day:
+    due:
+      - task: project_proposal
+      - reading: debugging_strategies
+    in_class:
+      - activity: debugging
+
+- day:
+    in_class:
+      - task: project
+
+- day:
+    due:
+      - hw: audio_synth
+    in_class:
+      - task: project
+
+- day:
+    in_class:
+      - task: project
+
+- day:
+    in_class:
+      - task: project
+
+- day:
+    in_class:
+      - task: project
+
+- day:
+    due:
+      - task: conceptual_puzzles
+      - task: mscs_events
+      - task: project
+    in_class:
+      - activity:
+          name: "Progress Presentations!"
+      - task: project

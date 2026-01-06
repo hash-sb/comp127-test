@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 28.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 479.8 260.83" style="enable-background:new 0 0 479.8 260.83;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#221F20;}
+	.st1{font-family:'HelveticaNeue-Bold';}
+	.st2{font-size:24px;}
+	.st3{opacity:0.5;fill:none;stroke:#5E55E0;stroke-width:2;stroke-miterlimit:10;}
+</style>
+<font horiz-adv-x="1000">
+<!-- &quot;Helvetica Neue&quot; is a trademark of Heidelberger Druckmaschinen AG, which may be registered in certain jurisdictions, exclusivly licensed through Linotype Library GmbH, a wholly owned subsidiary of Heidelberger Druckmaschinen AG. -->
+<font-face font-family="HelveticaNeue-Bold" units-per-em="1000" underline-position="-100" underline-thickness="50"/>
+<missing-glyph horiz-adv-x="500" d="M391,607l-280,0l0,-512l280,0M482,698l0,-695l-465,0l0,695z"/>
+<glyph unicode="-" horiz-adv-x="407" d="M53,334l0,-122l301,0l0,122z"/>
+<glyph unicode="0" horiz-adv-x="556" d="M163,353C163,365 163,380 164,397C164,414 165,431 167,449C169,467 172,485 177,503C182,520 188,536 197,550C205,564 216,575 229,584C242,593 258,597 277,597C296,597 313,593 326,584C339,575 350,564 359,550C368,536 374,520 379,503C383,485 386,467 389,449C391,431 392,414 393,397C393,380 393,365 393,353C393,333 392,309 391,281C390,252 386,225 379,199C372,172 360,150 345,131C329,112 306,103 277,103C248,103 226,112 211,131C196,150 185,172 178,199C171,225 166,252 165,281C164,309 163,333 163,353M21,353C21,283 28,225 42,178C55,131 74,93 97,65C120,37 148,17 179,5C210,-7 242,-13 277,-13C312,-13 346,-7 377,5C408,17 435,37 459,65C482,93 501,131 515,178C528,225 535,283 535,353C535,421 528,478 515,525C501,571 482,608 459,636C435,664 408,684 377,696C346,708 312,714 277,714C242,714 210,708 179,696C148,684 120,664 97,636C74,608 55,571 42,525C28,478 21,421 21,353z"/>
+<glyph unicode="1" horiz-adv-x="556" d="M392,0l0,700l-113,0C275,673 267,651 254,633C241,615 226,601 208,590C189,579 169,571 146,567C123,562 99,560 74,561l0,-107l176,0l0,-454z"/>
+</font>
+
+	<g>
+	<text transform="matrix(1 0 0 1 100.6672 55.5478)" class="st0 st1 st2">-</text>
+	<text transform="matrix(1 0 0 1 58.4159 105.4514)" class="st0 st1 st2">-</text>
+	<text transform="matrix(1 0 0 1 -1.7759 162.0625)" class="st0 st1 st2">1000</text>
+	<text transform="matrix(1 0 0 1 83.7088 162.0618)" class="st0 st1 st2">100</text>
+	<text transform="matrix(1 0 0 1 148.757 111.58)" class="st0 st1 st2">10</text>
+	<line class="st3" x1="112.67" y1="55.55" x2="148" y2="90.29"/>
+	<line class="st3" x1="101.13" y1="55.98" x2="69.76" y2="90.29"/>
+	<text transform="matrix(1 0 0 1 141.9436 8.0161)" class="st0 st1 st2">-</text>
+	<text transform="matrix(1 0 0 1 190.0334 64.0483)" class="st0 st1 st2">1</text>
+	<line class="st3" x1="153.94" y1="8.02" x2="189.28" y2="42.76"/>
+	<line class="st3" x1="142.41" y1="8.44" x2="111.03" y2="42.76"/>
+	<line class="st3" x1="56.01" y1="105.32" x2="24.64" y2="139.64"/>
+	<line class="st3" x1="68.02" y1="105.32" x2="99.4" y2="139.64"/>
+</g>
+<g>
+	<text transform="matrix(-1 0 0 1 397.9253 55.5479)" class="st0 st1 st2">-</text>
+	<text transform="matrix(-1 0 0 1 440.1753 105.4514)" class="st0 st1 st2">-</text>
+	<text transform="matrix(1 0 0 1 281.2495 66.8087)" class="st0 st1 st2">1000</text>
+	<text transform="matrix(1 0 0 1 326.9795 112.6743)" class="st0 st1 st2">100</text>
+	<text transform="matrix(1 0 0 1 382.9704 161.5116)" class="st0 st1 st2">10</text>
+	<line class="st3" x1="385.92" y1="55.55" x2="350.59" y2="90.29"/>
+	<line class="st3" x1="397.46" y1="55.98" x2="428.84" y2="90.29"/>
+	<text transform="matrix(-1 0 0 1 356.647 8.0161)" class="st0 st1 st2">-</text>
+	<text transform="matrix(1 0 0 1 470.7107 161.8234)" class="st0 st1 st2">1</text>
+	<line class="st3" x1="344.65" y1="8.02" x2="309.31" y2="42.76"/>
+	<line class="st3" x1="356.19" y1="8.44" x2="387.56" y2="42.76"/>
+	<line class="st3" x1="442.58" y1="105.32" x2="473.95" y2="139.64"/>
+	<line class="st3" x1="430.57" y1="105.32" x2="399.2" y2="139.64"/>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 245.0478 158.7601)" class="st0 st1 st2">-</text>
+	<text transform="matrix(1 0 0 1 180.2272 203.9022)" class="st0 st1 st2">-</text>
+	<text transform="matrix(1 0 0 1 120.0354 260.5132)" class="st0 st1 st2">1000</text>
+	<text transform="matrix(1 0 0 1 205.52 260.5125)" class="st0 st1 st2">100</text>
+	<text transform="matrix(1 0 0 1 311.5717 203.9014)" class="st0 st1 st2">-</text>
+	<line class="st3" x1="257.05" y1="158.76" x2="309.52" y2="191.51"/>
+	<line class="st3" x1="245.51" y1="159.19" x2="191.57" y2="188.74"/>
+	<line class="st3" x1="177.83" y1="203.77" x2="146.45" y2="238.09"/>
+	<line class="st3" x1="189.83" y1="203.77" x2="221.21" y2="238.09"/>
+	<text transform="matrix(1 0 0 1 263.6519 260.512)" class="st0 st1 st2">10</text>
+	<text transform="matrix(1 0 0 1 350.0741 260.825)" class="st0 st1 st2">1</text>
+	<line class="st3" x1="309.94" y1="203.9" x2="278.56" y2="238.22"/>
+	<line class="st3" x1="321.94" y1="203.9" x2="353.32" y2="238.22"/>
+</g>
+</svg>

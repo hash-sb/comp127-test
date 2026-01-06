@@ -1,0 +1,33 @@
+reading:
+  name: "Reading"
+  name_plural: "Readings"
+  dir_name: "readings"
+  # Automatically assigned one class before due unless otherwise specified
+  auto_assign_date: true
+  instructions_url: "/resources/reading-procedure"
+
+task:
+  name: "Task"
+  name_plural: "Tasks"
+  dir_name: "tasks"
+  auto_assign_date: true
+
+activity:
+  name: "Activity"
+  name_plural: "Activities"
+  dir_name: "activities"
+  # Activity text is centered, no sidebar, large headings, etc.
+  display_mode: article
+  instructions_url: "/resources/activity-procedure"
+
+exercise:
+  name: "Take-home exercise"
+  name_plural: "Take-home exercises"
+  dir_name: "exercises"
+  instructions_url: "/resources/take-home-procedure"
+
+hw:
+  name: "Homework"
+  name_plural: "Homeworks"
+  dir_name: "hw"
+  instructions_url: "/resources/take-home-procedure"

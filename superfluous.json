@@ -1,0 +1,22 @@
+{
+  "ignore": [
+    ".DS_Store",
+    "•*",
+    "(*).*"
+  ],
+  "data_parsers": [ "JSON", "YAML", "CourseKramdown" ],
+  "renderer_opts": { },
+
+  "data": [
+    "gem:course-ssg:src/data",
+    "src/data"
+  ],
+
+  "presentation": [
+    "gem:course-ssg:src/presentation"
+  ],
+
+  "lib": [
+    "gem:course-ssg:src/lib"
+  ]
+}

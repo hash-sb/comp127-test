@@ -1,0 +1,7 @@
+*.log
+/output/
+/tmp/
+cache
+
+# Netlify local state should not be committeed
+.netlify

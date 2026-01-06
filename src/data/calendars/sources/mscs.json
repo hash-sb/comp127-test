@@ -1,0 +1,11 @@
+{
+    "name": "MSCS Events",
+    "gcal_id": "macalester.edu_k7f54d0aeqnpvqb3kjl5kvnuvg@group.calendar.google.com",
+    "default_category": "dept_events",
+    "categories": [
+        {
+            "match_desc": "office hours|R support",
+            "category": null
+        }
+    ]
+}

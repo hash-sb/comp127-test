@@ -1,0 +1,44 @@
+# We keep these in a separate file so that it's easier to mass-remove them at the start of a new
+# semester, in order to ensure we don’t accidentally link to a previous semester’s instance.
+
+activities:
+  expressions_asts_types: https://classroom.github.com/a/UNq0JKpx
+  string_methods: https://classroom.github.com/a/mtXeGysk
+  unit_testing: https://classroom.github.com/a/rAzZ16d0
+  refactoring_using_tests: https://classroom.github.com/a/6QGG9Oul
+  emoji_drawing: https://classroom.github.com/a/Fts0cLft
+  bicycle: https://classroom.github.com/a/N5LuY9aT
+  inkblot: https://classroom.github.com/a/Kk0Ahfyj
+  library_media: https://classroom.github.com/a/GyOWqzdp
+  train_car: https://classroom.github.com/a/Qv0hptbh
+  employee_database: https://classroom.github.com/a/_tRBd7LF
+  critters: https://classroom.github.com/a/5S3EtBR-
+  # NOTE both graphing calculator activities use the same repo and same GH Classroom assignment
+  graphing_calculator_1: https://classroom.github.com/a/E1kxSTL4
+  loops_streams: https://classroom.github.com/a/tvinqrKw
+  # NOTE both concurrency activities use the same repo and same GH Classroom assignment
+  concurrency_1: https://classroom.github.com/a/LTcf8Lv7
+  pixel_arrays: https://classroom.github.com/a/C7p0M9AY
+  maps_intro: https://classroom.github.com/a/8QcgJgXg
+  registrar_1: https://classroom.github.com/a/pk21YdXp
+  play: https://classroom.github.com/a/1VNHVXbV
+  debugging: https://classroom.github.com/a/qBUD0ARD
+
+exercises:
+  game_of_life: https://classroom.github.com/a/i_ee5P5W
+  emoji_vacation: https://classroom.github.com/a/wlXl2wgI
+  cell_absorption: https://classroom.github.com/a/AqsYA9qF
+  rpg_battle: https://classroom.github.com/a/us41S-SL
+  weather_display: https://classroom.github.com/a/nZOFSnsr
+  registrar_2: https://classroom.github.com/a/87KUd7wl
+
+hw:
+  hw0: https://classroom.github.com/a/J0jTkxvo
+  units_and_coins: https://classroom.github.com/a/wR4f7Tej
+  bubble_blitz: https://classroom.github.com/a/e4AyGamd
+  painter: https://classroom.github.com/a/_p09Vkdy
+  breakout: https://classroom.github.com/a/LE7DjyUi
+  audio_synth: https://classroom.github.com/a/c4FagvfS
+
+tasks:
+  project: https://classroom.github.com/a/FNluf0Sn

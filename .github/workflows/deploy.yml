@@ -2,16 +2,14 @@ name: Build and Deploy Ruby Site
 
 on:
   push:
-    branches: ["main"] # Change this if your default branch is different
+    branches: ["main"]
   workflow_dispatch:
 
-# Permissions for GitHub Pages deployment
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -19,30 +17,34 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # This env block overrides the global Bundler settings
+    env:
+      BUNDLE_FROZEN: "false"
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: .ruby-version
-          bundler-cache: true # Runs 'bundle install' and caches gems automatically
+          bundler-cache: false # Caching won't work well in dynamic mode
 
       - name: Install dependencies
         run: |
+          # Force remove any deployment-specific configs
+          bundle config unset deployment
           bundle config set --local frozen false
           bundle lock --add-platform x86_64-linux
           bundle install
 
       - name: Build site
-        # Replace 'jekyll build' with your specific build command if using Middleman/etc.
-        run: bundle exec jekyll build 
+        run: bundle exec jekyll build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./_site # Ensure this matches your build output directory
+          path: ./_site
 
   deploy:
     environment:

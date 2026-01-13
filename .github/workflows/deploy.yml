@@ -33,16 +33,16 @@ jobs:
           bundle install
 
       - name: Build site
-        # Removed the invalid --site-url flag
         run: bundle exec superfluous .
 
       - name: Fix Paths for GitHub Pages
-        # This shell script finds all HTML and CSS files and replaces 
-        # absolute paths (starting with /) with relative paths or 
-        # adds the repository name prefix.
+        # This version is safer: it only replaces paths starting with / 
+        # that DON'T already have the repo name.
         run: |
           find output -name "*.html" -type f -exec sed -i 's|href="/|href="/comp127-test/|g' {} +
           find output -name "*.html" -type f -exec sed -i 's|src="/|src="/comp127-test/|g' {} +
+          # Fix potential double-slash or double-prefixing
+          find output -name "*.html" -type f -exec sed -i 's|/comp127-test//comp127-test/|/comp127-test/|g' {} +
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

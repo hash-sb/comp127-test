@@ -10,6 +10,10 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,37 +24,32 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.4' 
-          bundler-cache: false # Required because we are bypassing the lockfile
+          # Automatically uses version from .ruby-version
+          bundler-cache: false 
 
       - name: Install Dependencies
         run: |
-          # 1. Force Bundler to allow changes to the lockfile in the CI memory
           bundle config set --local frozen false
-          
-          # 2. Ensure we install all gems, including those in the development group
-          # (CI often skips development gems by default)
-          bundle install --with development
+          bundle config set --local with 'development'
+          bundle install
 
       - name: Build site
-        # Use bundle exec to ensure Bundler looks inside your Gemfile 
-        # for the 'superfluous' executable.
-        run: bundle exec superfluous .
+        # We define the site-url specifically for GitHub Pages subfolder hosting
+        run: |
+          bundle exec superfluous . --site-url="https://hash-sb.github.io/comp127-test"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
+          # Per your update, the site is built into the 'output' folder
           path: ./output
 
   deploy:
-    needs: build
-    permissions:
-      pages: write
-      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment

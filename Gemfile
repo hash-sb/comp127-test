@@ -4,6 +4,8 @@ source "https://rubygems.org"
 
 gem "jekyll"
 
+gem "superfluous"
+
 gem "course-ssg", git: "https://codeberg.org/pcantrell/course-ssg", branch: "main"
 
 gem "superfluous", git: "https://codeberg.org/pcantrell/superfluous.git", branch: "main"

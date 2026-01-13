@@ -2,17 +2,13 @@ name: Deploy Superfluous Site to Pages
 
 on:
   push:
-    branches: ["main"] # Ensure this matches your default branch name
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
   contents: read
   pages: write
   id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
 
 jobs:
   build:
@@ -24,40 +20,37 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          # We disable automatic caching to avoid "frozen mode" errors 
-          # since we aren't updating the lockfile locally.
-          bundler-cache: false
+          ruby-version: '3.4' 
+          bundler-cache: false # Required because we are bypassing the lockfile
 
       - name: Install Dependencies
         run: |
-          # Allow the runner to modify the lockfile in its own memory
+          # 1. Force Bundler to allow changes to the lockfile in the CI memory
           bundle config set --local frozen false
-          # Install the specific build tool globally on the runner
-          gem install superfluous
-          # Install any other gems listed in your Gemfile
-          bundle install
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
+          
+          # 2. Ensure we install all gems, including those in the development group
+          # (CI often skips development gems by default)
+          bundle install --with development
 
       - name: Build site
-        # We call the command directly (not via bundle exec) 
-        # to ensure it uses the version we just installed.
-        run: superfluous .
+        # Use bundle exec to ensure Bundler looks inside your Gemfile 
+        # for the 'superfluous' executable.
+        run: bundle exec superfluous .
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # This should point to the folder created by the 'superfluous' command.
-          # Default for many Ruby generators is '_site'.
           path: ./_site
 
   deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment

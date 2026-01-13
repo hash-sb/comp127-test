@@ -24,7 +24,6 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          # Automatically uses version from .ruby-version
           bundler-cache: false 
 
       - name: Install Dependencies
@@ -34,14 +33,20 @@ jobs:
           bundle install
 
       - name: Build site
-        # We define the site-url specifically for GitHub Pages subfolder hosting
+        # Removed the invalid --site-url flag
+        run: bundle exec superfluous .
+
+      - name: Fix Paths for GitHub Pages
+        # This shell script finds all HTML and CSS files and replaces 
+        # absolute paths (starting with /) with relative paths or 
+        # adds the repository name prefix.
         run: |
-          bundle exec superfluous . --site-url="https://hash-sb.github.io/comp127-test"
+          find output -name "*.html" -type f -exec sed -i 's|href="/|href="/comp127-test/|g' {} +
+          find output -name "*.html" -type f -exec sed -i 's|src="/|src="/comp127-test/|g' {} +
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Per your update, the site is built into the 'output' folder
           path: ./output
 
   deploy:

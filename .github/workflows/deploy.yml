@@ -2,7 +2,7 @@ name: Deploy Superfluous Site to Pages
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main"] # Ensure this matches your default branch name
   workflow_dispatch:
 
 permissions:
@@ -24,21 +24,32 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          # Automatically detects version from .ruby-version
-          bundler-cache: false 
+          # We disable automatic caching to avoid "frozen mode" errors 
+          # since we aren't updating the lockfile locally.
+          bundler-cache: false
+
+      - name: Install Dependencies
+        run: |
+          # Allow the runner to modify the lockfile in its own memory
+          bundle config set --local frozen false
+          # Install the specific build tool globally on the runner
+          gem install superfluous
+          # Install any other gems listed in your Gemfile
+          bundle install
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
       - name: Build site
-        # We remove '--live' so the action completes after generating the files
-        run: bundle exec superfluous .
+        # We call the command directly (not via bundle exec) 
+        # to ensure it uses the version we just installed.
+        run: superfluous .
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Superfluous typically outputs to '_site'. 
-          # If your config uses a different folder, update this path.
+          # This should point to the folder created by the 'superfluous' command.
+          # Default for many Ruby generators is '_site'.
           path: ./_site
 
   deploy:
